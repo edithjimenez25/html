@@ -1,0 +1,18 @@
+p {
+    color:blue;
+    background-color: chocolate;
+}
+h1 {
+    color: red;
+}
+/*como asignar propiedades a un elemento especifico, para */
+/*estilizando solo un ID nombrado introduction*/
+#introduction {
+            color:white;
+            background-color: black;
+}
+/*estilizado de class*/
+.Titulares {
+    color: yellowgreen;
+    background-color: darkgreen;
+}

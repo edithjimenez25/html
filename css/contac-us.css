@@ -1,0 +1,230 @@
+/*CSS contact-us Segunda clase*/
+/*codigo para clasificar colores*/
+/* 
+Existe varios sistema de codigo para manejar colores 
+rgb red green blue
+por ejemplo rgb (255, 128, 0) 
+rgba donde a identifica la transparencia
+codigo hexadecimal, se usa escribiendo # antes de 
+la linea de codigo por ejempo #ae00ff79
+#fff es el color blanco
+*/
+p {
+    color:black;
+    background-color: rgb(196, 247, 11);
+    /* en el borde se destaca el grosor, si la linea es solida o discontinua, y luego el color */
+    /*border: 5px solid green;*/
+    /*tambien se puede definir cada parametro del borde independientemente  */
+    border-style: groove;
+    border-color: rgb(22, 223, 32);
+    border-width: 10px;
+    /*en este caso el margen afecta todos los lados*/
+    margin: 35px;
+    /*el primer valor representa la vertical y el segundo la horizontal*/
+    margin:0 50px;
+    padding: 35px;
+    /*width and height abajo es patra definir el tamano de la caja del parrafo p*/
+    width:400px;
+    height:100px;
+    /*text-align is horizontal only*/
+    text-align: center;
+    text-transform:inherit ;
+    /*text-decoration se utiliza para forzar a los link no tener la linea por debajo, subrayado*/
+    /*text-decoration: none;*/
+    text-decoration-line:none;
+    /*box-shadow: horizontal offset | vertical offset | blur radius | spread radius (optional) | color */
+    text-shadow: 2px 2px 5px blue ;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    /*display inline permite tener varios elementos en una sola linea y 
+    el display bloack es un solo elemento, cuando esto se usa debo 
+    tambien anadir este tipo de display a los otros elementos como h1 */
+    /*display: inline;*/
+    /*position define los elemento que se deben mostar en todo momento */
+    position:relative ;
+
+}
+
+body {
+    color: #0a0a0a;
+    background-color: rgba(41, 134, 114, 0.524);
+
+}
+h1 {
+    display:block;
+    font-size: 20px;
+    border-style: dashed;
+}
+
+/*propiedad general */
+body {
+    /*display: grid;
+    /*debo definir cuantas columnas voy a usar, defino # columnas fracciones */
+    /* grid-template-columns: 1fr 1fr ;*/
+    /*justify-content: center; se justifica los items en forma horizontal*/
+    /*justify-items: center;
+    /*align-content: center; alinea los items en vertical*/
+    /*align-items: center;
+    text-align: center;*/
+    display: flex;
+    /*flex-direction: column;*/
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* PSEUDOCLASES */
+/* trabajando para darle caracteristicas al elemento button */
+
+button:hover {
+    background-color:#e91e63 ;
+}
+/* Estilo para la etiqueta anchor a cuando el link se ha visitdo y sin visitar a */
+/* pagina no visitada */
+a:link {
+    color: blue;
+    font-size: 30px;
+}
+/* pagina visitada */
+a:visited {
+    color:brown;
+    font-size: 50px;
+}
+/*click en el enlace */
+a:active {
+    color:chartreuse;
+    font-size: 100px;
+}
+/* colocada sobre el link muestra otras caracteristicas*/
+a:hover{
+    color: #0a0a0a;
+}
+a {
+    text-decoration: none; /* elimina el subrayado del link */
+}
+/* TRANSITIONS */
+/* la transicion define el tiempo en segundo */
+button{
+    width:100px;
+    height:100px;
+    color: #ff879f;
+    transition: width 2s, height 5s;
+}
+/* puedo modificar cualquier propiedad del elemento */
+button:hover{
+    width: 800px;
+    height: 500px;
+    color:aquamarine;
+}
+/*ANIMACIONES*/
+/* no requieren una action para que ocurran */
+body {
+    background-color: darkorchid;
+    animation-name: example;
+    animation-duration: 20s;
+}
+/* se usa @keyframes para crear una animacion y la aninacion nombre debe estar creado */
+@keyframes example{
+    from {background-color: #e91e63;}
+    to {background-color: aqua;}
+
+}
+
+#animation{
+    width:200px;
+    height:200px;
+    position: relative;
+    background-color: hotpink;
+    animation-name: movement;
+    animation-duration: 5s;
+    animation-iteration-count: infinite; /* define el numero de veces que la animacion se repite */
+}
+/* en este se muetra las diferentes posiciones del elemento movement */
+@keyframes movement {
+    0% {left: 0px; top:0px; background-color: #0a0a0a;}
+    25% {left:200px; top:0px ; background-color:blue }
+    50% {left:200px; top:200px;  background-color:green}
+    75% {left:500px ; top:200px;  background-color:red}
+    100% {left: 0px; top:0px;  background-color:#0a0a0a}
+}
+
+
+/*  */
+/* PSEUDOELEMENTOS */
+/* SIRVEN PARA DEFINIR ESTILOS */
+/* primera letra del elemento */
+P::first-letter{
+    font-size: 50px;
+}
+/* primera linea del elemento */
+p::first-line{
+    color: darkolivegreen;
+}
+/*estilo despues del elemento, no muy usuado  */
+p::after{
+    color: #e91e63;
+}
+/*estilo antes del elemento, no muy usado  */
+P::before{
+    color: peru;
+}
+
+
+
+
+/*utiliza la metodolgia responsive llamada media queries
+https://www.w3schools.com/css/css_rwd_mediaqueries.asp  */
+/*  */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: blue;
+        /*el comando grid me permite crear el grid y luego definir las columnas*/
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        font-size: 10px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    body{
+        background-color: aqua;
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        font-size: 10px;
+    }
+    }    
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    body{
+        background-color: blueviolet;
+        grid-template-columns: 1fr 1fr ;
+        flex-direction: row;
+        font-size: 15px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    body{
+        background-color:chartreuse;
+        grid-template-columns: 1fr 1fr ;
+        flex-direction: row;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    body{
+        background-color: #ff879f;
+        grid-template-columns: 1fr 1fr ;
+        flex-direction: row;
+    }
+}
+
+/*  */

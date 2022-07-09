@@ -1,0 +1,106 @@
+<!-- etiqueta autoconclusiva-->
+<!DOCTYPE html>
+<!-- etiqueta de html tiene propiedades o atributos que proveen informacion complementaria, en este caso lang define el lenguage-->
+
+<html lang="en">
+<meta charset="UTF-8" />    
+<!--head representa una etiqueta de SEO  -->
+<head>
+    <!--title es el nombre de la pagina que aparece en la tab del navegador, la descripcion de la pagina -->
+    <title>Document</title>
+    <!--CSS (cascade style sheet) styles se pueden colocar en el html pero no es recomendable -->
+    <!--LINKS-->
+    <link rel="stylesheet" href="css/style.css"
+    
+
+    <style>
+    
+    /*-usando esta manera agecta a todos los elementos p - */
+        /*p {
+            color:blue;
+            background-color: chocolate;
+        }
+        h1 {
+            color: red;
+        }*/
+        /*como asignar propiedades a un elemento especifico, para */
+        /*estilizando solo un ID nombrado introduction*/
+        /*#introduction {
+            color:white;
+            background-color: black;
+        }*/
+        /*estilizado de class*/
+        /*.Titulares {
+            color: yellowgreen;
+            background-color: darkgreen;
+        }*/
+    </style>
+
+
+</head>
+
+
+<!--body es el contenido de pagina web -->
+    <body>
+        <!-- etiqueta de parrafo-->
+        <p id="introduction">Hola Mundo</p
+            <!-- la etiqueta H1 represenat header la h1 es un header principal y a medida que se aumenta el numero es menos importante -->
+            <h1 class="Titulares"> Esto es un titular</h1>
+            <h2 class="Titulares"> Esto es un subtitulo</h2>
+            <h3 class="Titulares"> Titulo menos importante</h3>
+            <h4 class="Titulares"> titulo aun menos importante</h4>
+            <h5 class="Titulares"> ya esto casi no se usa</h5>
+            <h6> titulo extremedamente pequeño</h6>
+
+            <!--a es una etiqueta para enlaces y target permite que la pagina se abra en otra pestaña -->
+            <a href="https://www.youtube.com/" target="_blank"> Ir a you tube</a> 
+            <a href="sections/contact-us.html" target="_blank"> Contact-us</a> 
+            
+            <!--la etiqueta img es para imagenes , alt son las propiedades de la imagen y significa titulo alternativo-->
+            <!--width es el ancho de la imagen y se define en porcentaje o pixeles -->
+            <!--height define el alto de la imagen pero no es recomendable usar usar width y height a la vez porque la imagen se puede distorcionar -->
+            <!--la etiqueta de imagen no tiene cierre porque estas imagenes no llevan contenido -->
+            <img width="500px" height="500px" src="https://assets.puzzlefactory.com/puzzle/349/536/original.webp" alt="Dog">
+            
+            <!--Como usar una imagen local -->
+            <img width="500px" src="./imagen/TruckJimenez.jpg" alt="suv">
+            
+            <!--lista no organizada unlisten list-->
+            <ul>
+                <!--li elemento de lista -->
+                <li>beef</li>
+                <li>chicken </li>
+                <li>vegetables</li>
+                <li>Bread</li>
+            </ul>
+
+            <!--ol lista organizada -->
+            <ol>
+                <li>Como Utilizar una lampara</li>
+                <li>Colocarla en tu lugar de preferencia</li>
+                <li>Asegurase que este conectada al power</li>
+                <p>Darle al boton ON</p>
+            </ol>
+
+            <!--division como creamos agrupaciones de elementos -->
+            <!--la etiqueta div permite crear estas con css inline-->
+            <div style="color:red; background-color:blue">
+            
+                <P>Hola</P>
+                <h1> Titulo</h1>
+                <img 
+                    width="500px" 
+                    src="./imagen/TruckJimenez.jpg" 
+                    alt="suv"
+                />
+            </div>
+            <!--HTML semantico -->
+            <!--cada etiqueta tiene un proposito y los navegadores lo reconocen -->
+            <Section></Section>
+            <nav></nav>
+            
+
+    </body>
+</html>
+
+<!-- -->

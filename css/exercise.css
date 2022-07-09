@@ -31,7 +31,7 @@ copio el codigo css y excluyo el background color porque ya lo tengo definido*/
 
 .robot svg {
     position: absolute;
-    top: 10%;
+    top: 5%;
     left: 50%;
     display: block;
     margin: 0 auto;
